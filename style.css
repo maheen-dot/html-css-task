@@ -6,27 +6,66 @@
 
 body{
     font-family:'Poppins',sans-serif;
+    line-height:1.6;
+    color:#333;
 }
 
-/* NAVBAR */
+img{
+    max-width:100%;
+    display:block;
+}
+
+button{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+/* =========================
+        NAVBAR
+========================= */
 
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 100px;
+    padding:20px 80px;
+    background:#fff;
+    position:relative;
+}
+
+.logo{
+    color:#1c8089;
+    font-size:30px;
+    font-weight:700;
+}
+
+.nav-menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex:1;
+    margin-left:40px;
 }
 
 .nav-links{
     display:flex;
-    gap:20px;
-    font-size:14px;
-    font-weight:600;
+    gap:25px;
 }
 
 .nav-links a{
     text-decoration:none;
-    color:rgb(123,122,122);
+    color:#555;
+    font-weight:600;
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#1c8089;
 }
 
 .nav-right{
@@ -41,16 +80,18 @@ form{
 
 form i{
     position:absolute;
+    left:12px;
     top:50%;
-    left:10px;
     transform:translateY(-50%);
     color:#888;
 }
 
 form input{
-    padding:8px 8px 8px 30px;
-    border-radius:4px;
+    width:220px;
+    padding:10px 12px 10px 36px;
     border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
 }
 
 .auth-buttons{
@@ -59,31 +100,37 @@ form input{
 }
 
 .login-button{
-    background:transparent;
-    border:1px solid #5d5b5b;
+    background:white;
     color:#1c8089;
-    padding:10px 20px;
-    border-radius:4px;
-    cursor:pointer;
+    border:1px solid #1c8089;
+    padding:10px 18px;
+    border-radius:5px;
 }
 
 .signup-button{
     background:#1c8089;
     color:white;
     border:none;
-    padding:10px 20px;
-    border-radius:4px;
+    padding:10px 18px;
+    border-radius:5px;
+}
+
+.hamburger{
+    display:none;
+    font-size:28px;
     cursor:pointer;
 }
 
-/* HERO */
+/* =========================
+        HERO
+========================= */
 
 .hero{
-    padding:10px 10px;
-    margin-left: 120px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:60px;
+    padding:70px 80px;
 }
 
 .hero-text{
@@ -91,12 +138,13 @@ form input{
 }
 
 .hero-text h1{
-    font-size:36px;
+    font-size:42px;
+    line-height:1.3;
 }
 
 .hero-text p{
     margin:20px 0 30px;
-    color:#5d5b5b;
+    color:#666;
 }
 
 .hero button{
@@ -104,33 +152,35 @@ form input{
     color:white;
     border:none;
     padding:12px 24px;
-    border-radius:4px;
-    cursor:pointer;
+    border-radius:5px;
 }
 
 .hero-image{
     flex:1;
-    text-align:center;
+    display:flex;
+    justify-content:center;
 }
 
 .hero-image img{
     width:100%;
-    max-width:500px;
+    max-width:480px;
 }
 
-/* CATEGORIES */
+/* =========================
+      CATEGORIES
+========================= */
 
 .categories{
-    padding:50px 20px;
+    padding:60px 20px;
     text-align:center;
 }
 
 .category-container{
     display:flex;
     justify-content:center;
-    gap:80px;
+    gap:70px;
     flex-wrap:wrap;
-    padding:50px 20px;
+    margin-top:50px;
 }
 
 .category-card{
@@ -155,29 +205,30 @@ form input{
 
 .category-card p{
     margin-top:15px;
-    color:#5d5b5b;
+    color:#555;
     font-weight:600;
 }
 
-/* FEATURED COURSES */
+/* =========================
+      FEATURED COURSES
+========================= */
 
 .featured-courses{
-    padding:50px 80px;
+    padding:60px 80px;
     text-align:center;
 }
 
 .course-list{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    gap:25px;
     margin-top:40px;
 }
 
 .course-item{
     border:1px solid #e5e5e5;
-    border-radius:8px;
+    border-radius:10px;
     padding:20px;
-
     display:flex;
     flex-direction:column;
 }
@@ -186,7 +237,6 @@ form input{
     width:100%;
     height:180px;
     object-fit:contain;
-    border-radius:6px;
 }
 
 .course-item h3{
@@ -194,32 +244,32 @@ form input{
 }
 
 .course-item p{
-    color:#5d5b5b;
+    color:#666;
     margin-bottom:20px;
 }
 
 .course-item button{
     margin-top:auto;
     width:100%;
-    padding:10px;
-    border:none;
     background:#1c8089;
     color:white;
-    border-radius:4px;
-    cursor:pointer;
+    border:none;
+    padding:12px;
+    border-radius:5px;
 }
-
-/* WHY US */
+/* =========================
+        WHY US
+========================= */
 
 .why-us{
-    padding:50px 20px;
+    padding:60px 20px;
     text-align:center;
 }
 
 .benefits{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    gap:25px;
     margin-top:40px;
 }
 
@@ -229,22 +279,29 @@ form input{
 
 .benefit-card i{
     background:#1c8089;
-    color:white;
-    border-radius:50%;
-    padding:20px;
+    color:#fff;
     font-size:30px;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
 }
 
 .benefit-card p{
     margin-top:20px;
-    color:#5d5b5b;
+    color:#555;
     font-weight:600;
 }
 
-/* TESTIMONIALS */
+/* =========================
+        TESTIMONIALS
+========================= */
 
 .testimonials{
-    padding:50px 20px;
+    padding:60px 20px;
     text-align:center;
 }
 
@@ -257,13 +314,13 @@ form input{
 .testimonial-item{
     flex:1;
     background:#cfe8ea;
-    border-radius:8px;
-    padding:20px;
+    border-radius:10px;
+    padding:25px;
 }
 
 .testimonial-item p{
     font-style:italic;
-    color:#5d5b5b;
+    color:#555;
     margin-bottom:20px;
 }
 
@@ -275,33 +332,116 @@ form input{
 }
 
 .testimonial-item img{
-    width:40px;
-    height:40px;
+    width:45px;
+    height:45px;
     border-radius:50%;
 }
 
-/* FOOTER */
+/* =========================
+        FOOTER
+========================= */
 
 footer{
+    background:#f5f5f5;
     padding:20px;
     text-align:center;
-    background:#f5f5f5;
 }
 
-/* TABLET */
+/* =========================
+      TABLET RESPONSIVE
+========================= */
 
 @media (max-width:992px){
 
+    /* NAVBAR */
+
     nav{
-        padding:20px 40px;
-        flex-wrap:wrap;
-        gap:20px;
+        padding:20px;
     }
+
+    .hamburger{
+        display:block;
+        font-size:28px;
+    }
+
+    .nav-menu{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#fff;
+        flex-direction:column;
+        gap:25px;
+        padding:25px;
+        margin-left:0;
+        box-shadow:0 10px 20px rgba(0,0,0,.1);
+        z-index:100;
+    }
+
+    .nav-menu.active{
+        display:flex;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .nav-right{
+        flex-direction:column;
+        width:100%;
+    }
+
+    form{
+        width:100%;
+        max-width:350px;
+    }
+
+    form input{
+        width:100%;
+    }
+
+    .auth-buttons{
+        width:100%;
+        max-width:350px;
+        flex-direction:column;
+    }
+
+    .login-button,
+    .signup-button{
+        width:100%;
+    }
+
+    /* HERO */
 
     .hero{
         flex-direction:column;
+        justify-content:center;
+        align-items:center;
         text-align:center;
+        gap:40px;
         padding:60px 40px;
+    }
+
+    .hero-text{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-image{
+        justify-content:center;
+    }
+
+    .hero-image img{
+        max-width:380px;
+    }
+
+    /* COURSES */
+
+    .featured-courses{
+        padding:50px 40px;
     }
 
     .course-list{
@@ -312,32 +452,27 @@ footer{
         height:150px;
     }
 
+    /* BENEFITS */
+
     .benefits{
         grid-template-columns:repeat(2,1fr);
     }
+
+    /* TESTIMONIALS */
 
     .testimonial-list{
         flex-direction:column;
     }
 }
 
-/* MOBILE */
+/* =========================
+      MOBILE RESPONSIVE
+========================= */
 
 @media (max-width:768px){
 
     nav{
-        flex-direction:column;
-        text-align:center;
         padding:20px;
-    }
-
-    .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .nav-right{
-        flex-direction:column;
     }
 
     .hero{
@@ -345,7 +480,23 @@ footer{
     }
 
     .hero-text h1{
-        font-size:36px;
+        font-size:30px;
+    }
+
+    .hero-image img{
+        max-width:280px;
+    }
+
+    .categories{
+        padding:40px 20px;
+    }
+
+    .category-container{
+        gap:35px;
+    }
+
+    .featured-courses{
+        padding:40px 20px;
     }
 
     .course-list{
@@ -353,10 +504,18 @@ footer{
     }
 
     .course-item img{
-        height:130px;
+        height:140px;
     }
 
     .benefits{
         grid-template-columns:1fr;
+    }
+
+    .testimonial-item{
+        padding:20px;
+    }
+
+    footer{
+        font-size:14px;
     }
 }
